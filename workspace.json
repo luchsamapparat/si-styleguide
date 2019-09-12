@@ -73,7 +73,7 @@
       "projectType": "library",
       "root": "libs/angular-components",
       "sourceRoot": "libs/angular-components/src",
-      "prefix": "si-styleguide",
+      "prefix": "si",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

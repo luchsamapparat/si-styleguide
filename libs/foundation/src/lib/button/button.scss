@@ -1,0 +1,30 @@
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-family: Segoe UI;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  height: 44px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #003399;
+
+}
+
+.btn-secondary {
+  background: #FF9933;
+}
