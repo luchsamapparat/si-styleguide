@@ -9,12 +9,12 @@ storiesOf('Button', module)
   .add('Primary', () => ({
     template: `<button class="btn btn-primary">{{ label }}</button>`,
     props: {
-      label: text('Label', 'My Button Label')
+      label: text('Label', 'Native Button')
     }
   }), { notes: { markdown } })
   .add('Secondary', () => ({
     template: `<button class="btn btn-secondary">{{ label }}</button>`,
     props: {
-      label: text('Label', 'My Button Label')
+      label: text('Label', 'Native Button')
     }
   }), { notes: { markdown } });

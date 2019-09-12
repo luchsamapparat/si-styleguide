@@ -17,7 +17,7 @@ storiesOf('Web Components', module)
   .add('Button', () => ({
     template: `<si-button [variant]="variant" [label]="label"></si-button>`,
     props: {
-      label: text('Label', 'My Button Label'),
+      label: text('Label', 'Web Component Button'),
       variant: radios('Variant', {
         Primary: 'primary',
         Secondary: 'secondary',

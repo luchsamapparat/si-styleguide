@@ -8,8 +8,5 @@
   ],
   "include": [
     "../libs/**/*"
-  ],
-  "files": [
-    "./typings.d.ts"
   ]
 }

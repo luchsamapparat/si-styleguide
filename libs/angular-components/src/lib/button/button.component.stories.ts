@@ -17,7 +17,7 @@ storiesOf('Angular Components', module)
   .add('Button', () => ({
     template: `<si-ng-button [variant]="variant" [label]="label"></si-ng-button>`,
     props: {
-      label: text('Label', 'My Button Label'),
+      label: text('Label', 'Angular Button'),
       variant: radios('Variant', {
         Primary: 'primary',
         Secondary: 'secondary',

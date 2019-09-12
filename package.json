@@ -23,23 +23,24 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "storybook": "start-storybook:run",
+    "storybook:serve": "start-storybook --port 4300",
     "storybook:build": "build-storybook"
   },
   "private": true,
   "dependencies": {
-    "@angular/compiler": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "core-js": "^2.5.4",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.9.0",
-    "zone.js": "^0.9.1",
     "@angular/animations": "^8.0.0",
     "@angular/common": "^8.0.0",
+    "@angular/compiler": "^8.0.0",
+    "@angular/core": "^8.0.0",
     "@angular/forms": "^8.0.0",
     "@angular/platform-browser": "^8.0.0",
     "@angular/platform-browser-dynamic": "^8.0.0",
-    "@angular/router": "^8.0.0"
+    "@angular/router": "^8.0.0",
+    "core-js": "^2.5.4",
+    "ngx-markdown": "8.1.0",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.9.0",
+    "zone.js": "^0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.801.1",
