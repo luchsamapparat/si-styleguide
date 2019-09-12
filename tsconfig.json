@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@si-styleguide/foundation": ["libs/foundation/src/index.ts"],
+      "@si-styleguide/web-components": ["libs/web-components/src/index.ts"],
+      "@si-styleguide/angular-components": [
+        "libs/angular-components/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -7,5 +7,15 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "foundation": {
+      "tags": []
+    },
+    "web-components": {
+      "tags": []
+    },
+    "angular-components": {
+      "tags": []
+    }
+  }
 }
