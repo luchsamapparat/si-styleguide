@@ -16,6 +16,12 @@
     },
     "angular-components": {
       "tags": []
+    },
+    "styleguide-e2e": {
+      "tags": []
+    },
+    "styleguide": {
+      "tags": []
     }
   }
 }
