@@ -22,6 +22,12 @@
     },
     "styleguide": {
       "tags": []
+    },
+    "styleguide-static": {
+      "tags": []
+    },
+    "styleguide-static-e2e": {
+      "tags": []
     }
   }
 }

@@ -232,6 +232,83 @@
           }
         }
       }
+    },
+    "styleguide-static": {
+      "root": "apps/styleguide-static",
+      "sourceRoot": "apps/styleguide-static",
+      "projectType": "application",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/next:build",
+          "options": {
+            "root": "apps/styleguide-static",
+            "outputPath": "dist/apps/styleguide-static"
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/next:dev-server",
+          "options": {
+            "buildTarget": "styleguide-static:build",
+            "dev": true
+          },
+          "configurations": {
+            "production": {
+              "dev": false
+            }
+          }
+        },
+        "export": {
+          "builder": "@nrwl/next:export",
+          "options": {
+            "buildTarget": "styleguide-static:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/styleguide-static/tsconfig.json",
+              "apps/styleguide-static/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/styleguide-static/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/styleguide-static/jest.config.js",
+            "tsConfig": "apps/styleguide-static/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "styleguide-static-e2e": {
+      "root": "apps/styleguide-static-e2e",
+      "sourceRoot": "apps/styleguide-static-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/styleguide-static-e2e/cypress.json",
+            "tsConfig": "apps/styleguide-static-e2e/tsconfig.e2e.json",
+            "devServerTarget": "styleguide-static:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "styleguide-static:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/styleguide-static-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/styleguide-static-e2e/**"]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -250,10 +327,8 @@
     },
     "@nrwl/react": {
       "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
+        "linter": "eslint",
+        "babel": true
       }
     },
     "@nrwl/web": {
@@ -282,6 +357,12 @@
     },
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "scss",
+        "linter": "tslint"
+      }
     }
   }
 }
